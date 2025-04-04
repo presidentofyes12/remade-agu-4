@@ -1,0 +1,150 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "value",
+						"type": "int256"
+					}
+				],
+				"name": "computeTripartiteValue",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "first",
+								"type": "int256"
+							},
+							{
+								"internalType": "int256",
+								"name": "second",
+								"type": "int256"
+							},
+							{
+								"internalType": "int256",
+								"name": "third",
+								"type": "int256"
+							},
+							{
+								"internalType": "int256",
+								"name": "result",
+								"type": "int256"
+							}
+						],
+						"internalType": "struct TripartiteComputations.TripartiteResult",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "value",
+						"type": "int256"
+					}
+				],
+				"name": "getTripartiteComponents",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "first",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "second",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "third",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "expected",
+						"type": "int256"
+					}
+				],
+				"name": "validateTripartiteSum",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract_info/TripartiteComputations.sol": "TripartiteComputations"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract_info/TripartiteComputations.sol": {
+			"keccak256": "0x0ebd80ab19133af886636d91b6aef7c02809403af3410dceb4a51e6a70807419",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5ef9f59081dbeba9214dda4c154ced3369df962be451b92ef0369a75fbc198cf",
+				"dweb:/ipfs/QmQp7LYb7EkW61Kn1j4USaKZY2yLnnhUriGXQnrbs6q95R"
+			]
+		}
+	},
+	"version": 1
+}

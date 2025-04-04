@@ -1,0 +1,347 @@
+Here's Part 1 of the complete updated design:
+
+ AGU DAO Platform Design Document (v4)
+
+ I. SYSTEM ARCHITECTURE
+
+ A. Contract Integration Layer
+1. Entry Points
+   - TripartiteProxy (0xfBDB...731) as main gateway
+   - ViewConstituent (0x2F2a...689) for data queries
+   - StateConstituent (0xE24C...C78) for state management
+
+2. Token Operations
+   - DAOToken (0x2869...45b) for PITA management
+   - PLS to PITA conversion
+   - Balance tracking
+   - Transfer operations
+
+3. Logic & Validation
+   - LogicConstituent (0xdd7e...903) for operation validation
+   - ConceptMapping (0xE028...c1e) for DAO structure
+   - ConceptValues (0xbabf...C58) for value management
+   - TripartiteComputations (0x500E...0e3) for calculations
+
+ B. Nostr Integration Layer
+1. Primary Relays
+   - relay.damus.io (primary)
+   - relay.snort.social
+   - nostr.fmt.wiz.biz
+
+2. Event Management
+   - Team communications
+   - Proposal discussions
+   - Marketplace interactions
+   - System notifications
+
+ C. User Interface Layer
+1. Core Dashboards
+   - Main overview
+   - Team management
+   - Proposal tracking
+   - Marketplace interface
+
+2. Interactive Elements
+   - Transaction forms
+   - Chat interfaces
+   - Status displays
+   - Notification center
+
+ II. CORE FUNCTIONALITIES
+
+ A. PITA Acquisition System
+1. PLS Conversion Process
+   - Direct PLS deposit to contract
+   - Automatic PITA distribution
+   - Transaction tracking
+   - Balance updates
+
+2. Status Management
+   - Real-time conversion rates
+   - Transaction confirmation
+   - Balance verification
+   - History tracking
+
+ B. Team Formation System
+1. Proposal-Based Creation
+   - Automatic team formation post-approval
+   - Member assignment
+   - Role distribution
+   - Resource allocation
+
+2. Team Management
+   - Project tracking
+   - Member coordination
+   - Resource utilization
+   - Progress monitoring
+
+ C. DAO Funding Structure
+1. Fund Distribution
+   - Proposal-based allocation
+   - Milestone tracking
+   - Disbursement management
+   - Status monitoring
+
+2. Treasury Management
+   - Fund tracking
+   - Allocation oversight
+   - Transaction verification
+   - Report generation
+
+ D. Marketplace Operations
+1. Listing Management
+   - Product/service submission
+   - Admin review process
+   - Status tracking
+   - User interaction
+
+2. Transaction Handling
+   - Offer management
+   - Communication facilitation
+   - Status updates
+   - Review system
+
+
+
+ III. COMMUNICATION SYSTEMS
+
+ A. Nostr Channel Structure
+1. Team Channels
+   - Automatically created per team
+   - Member-specific access
+   - Project discussions
+   - Resource coordination
+
+2. DAO Governance Channels
+   - Proposal discussions
+   - Voting coordination
+   - Administrative announcements
+   - Community feedback
+
+3. Marketplace Channels
+   - Product/service discussions
+   - Buyer-seller communications
+   - Admin notifications
+   - Support discussions
+
+ B. Event Management
+1. Event Types
+   - Kind 0: User profiles/metadata
+   - Kind 1: Public announcements
+   - Kind 4: Encrypted DMs
+   - Kind 40: Marketplace listings
+   - Custom kinds: DAO-specific events
+
+2. Event Organization
+   - Threaded discussions
+   - Topic categorization
+   - Reference linking
+   - Status tracking
+
+ IV. USER EXPERIENCE DESIGN
+
+ A. Interface Organization
+1. Main Dashboard
+   - PITA balance display (via ViewConstituent)
+   - Active proposals status
+   - Team overview
+   - Recent activities
+
+2. Team Interface
+   - Team composition
+   - Project status
+   - Resource allocation
+   - Communication center
+
+3. Proposal Management
+   - Submission interface
+   - Status tracking
+   - Voting mechanism
+   - Discussion integration
+
+4. Marketplace Interface
+   - Listing browser
+   - Creation tools
+   - Transaction management
+   - Communication hub
+
+ B. Transaction Flows
+1. PITA Acquisition
+   - PLS amount input
+   - Rate display
+   - Confirmation process
+   - Status tracking
+
+2. Proposal Submission
+   - Form completion
+   - Team formation
+   - Funding allocation
+   - Status updates
+
+3. Marketplace Operations
+   - Listing creation
+   - Review process
+   - Status management
+   - Transaction handling
+
+ V. STATE MANAGEMENT
+
+ A. On-Chain State
+1. Contract Data
+   - PITA balances (DAOToken)
+   - Proposal status (StateConstituent)
+   - Team structures (LogicConstituent)
+   - System parameters (ViewConstituent)
+
+2. Transaction State
+   - Operation status
+   - Confirmation tracking
+   - Error handling
+   - State synchronization
+
+ B. Nostr State
+1. Communication Data
+   - Channel messages
+   - Private communications
+   - Status updates
+   - Event tracking
+
+2. Off-Chain Data
+   - User preferences
+   - Interface settings
+   - Local caching
+   - Temporary storage
+
+ VI. SECURITY & ACCESS CONTROL
+
+ A. Contract Security
+1. Access Management
+   - Role verification (ViewConstituent)
+   - Operation validation (LogicConstituent)
+   - State management (StateConstituent)
+   - Token operations (DAOToken)
+
+2. Transaction Security
+   - Signature verification
+   - State validation
+   - Error handling
+   - Recovery procedures
+
+ B. Nostr Security
+1. Channel Security
+   - Access control
+   - Message encryption
+   - Key management
+   - Event verification
+
+2. Data Protection
+   - Private messaging
+   - Sensitive data handling
+   - Access restrictions
+   - State protection
+
+ VII. INTEGRATION POINTS
+
+ A. Contract Integration
+1. ViewConstituent Usage
+   - Balance queries
+   - Status checks
+   - State verification
+   - Parameter reading
+
+2. StateConstituent Integration
+   - Proposal management
+   - Team structure
+   - Member status
+   - System state
+
+3. LogicConstituent Implementation
+   - Operation validation
+   - Logic processing
+   - State transitions
+   - Error handling
+
+ B. Nostr Integration
+1. Relay Management
+   - Connection handling
+   - Event distribution
+   - State synchronization
+   - Fallback procedures
+
+2. Event Processing
+   - Message routing
+   - Status updates
+   - Notification handling
+   - State management
+
+ VIII. OPERATIONAL WORKFLOWS
+
+ A. User Journeys
+1. New User Onboarding
+   - Wallet connection
+   - PITA acquisition
+   - Profile setup
+   - System introduction
+
+2. Team Participation
+   - Proposal involvement
+   - Team formation
+   - Resource access
+   - Communication setup
+
+3. Marketplace Engagement
+   - Listing creation
+   - Transaction handling
+   - Communication management
+   - Status tracking
+
+ B. Administrative Flows
+1. DAO Management
+   - Proposal oversight
+   - Fund allocation
+   - Team monitoring
+   - System maintenance
+
+2. Marketplace Administration
+   - Listing review
+   - Transaction oversight
+   - User management
+   - System monitoring
+
+Ensure that you use only the contracts below - do not create a new one:
+
+ Contract Addresses
+VITE_CONTRACT_CONCEPT_VALUES=0xbabf5c0170339814D17f31Ed4198557E4fd92C58
+VITE_CONTRACT_CONCEPT_MAPPING=0xE02894B878Eb424037C151b840C1db6Fde7Dec1e
+VITE_CONTRACT_TRIPARTITE_COMPUTATIONS=0x500E4ce4592051f8005e1313f0e9aB25aE43E0e3
+VITE_CONTRACT_DAO_TOKEN=0x28692ce06b9EB38a8b4D07FED172ba5c3403745b
+VITE_CONTRACT_LOGIC_CONSTITUENT=0xdd7eC040D5C2A15FFF30a5F7B004d888747Fa903
+VITE_CONTRACT_STATE_CONSTITUENT=0xE24C734260189dd58618A95619EfF4164f98CC78
+VITE_CONTRACT_VIEW_CONSTITUENT=0x2F2af46ae41ABEA5c3D8A50289d2b326D657a689
+VITE_CONTRACT_TRIPARTITE_PROXY=0xfBDB056Ac097EbB399065aeAd2375A2dAEE33731
+
+These contracts have been deployed and verified.
+Now I have a complete picture of the contract system:
+
+1. Core Contracts:
+- DAOToken: Handles membership and economic aspects
+- StateConstituent: Manages DAO state, proposals, and vouching
+- LogicConstituent: Validates operations and handles logic
+- ViewConstituent: Provides read-only views of DAO data
+
+2. Proxy and Upgrades:
+- TripartiteProxy: Main proxy contract managing upgrades
+- Handles contract upgrades and access control
+
+3. Concept System:
+- ConceptMapping: Defines and manages DAO concepts
+- ConceptValues: Stores and manages concept values
+- TripartiteComputations: Handles value computations
+
+CRITICAL REQUIREMENTS:
+
+    Do NOT modify any existing smart contract code
+    Do NOT change any contract interfaces or ABIs
+    Keep all existing web3/crypto functionality intact
+    Maintain all current dependencies and their versions
+
